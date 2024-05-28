@@ -72,7 +72,8 @@ body {
     background: white;
     color: #1a1a2e;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.5em;  /* フォントサイズを大きく */
+    font-weight: bold; /* フォントを太く */
 }
 
 #open-settings {
