@@ -69,8 +69,9 @@ body {
 #settings {
     margin-top: 10px;
     padding: 10px;
-    background: white;
+    border: none;
     border-radius: 10px;
+    background: white;
     color: #1a1a2e;
     display: flex;
     flex-direction: column;
