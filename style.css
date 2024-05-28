@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #1a1a2e;
+    color: white;
+}
+
+#pomodoro {
+    text-align: center;
+    transform: scale(0.8);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#pomodoro .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#pomodoro .buttons button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#pomodoro .buttons button.active {
+    background: white;
+    color: #1a1a2e;
+}
+
+#timer {
+    font-size: 4em;
+    margin: 20px 0;
+}
+
+.pomodoro-controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.pomodoro-controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #1a1a2e;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#open-settings {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#settings {
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#settings label {
+    display: block;
+    margin: 10px;
+    color: #1a1a2e;
+}
+
+#settings input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #1a1a2e;
+    border-radius: 5px;
+}
+
+#settings button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 25px;
+    background: #1a1a2e;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    border: none;
+    align-self: flex-start;
+}
