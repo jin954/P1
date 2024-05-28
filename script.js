@@ -17,12 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function startPomodoro() {
         // Pomodoro start logic
-        console.log("Pomodoro started");
     }
 
     function resetPomodoro() {
         // Pomodoro reset logic
-        console.log("Pomodoro reset");
     }
 
     function toggleSettings() {
@@ -39,9 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('pomodoroMinutes', pomodoroMinutes);
         localStorage.setItem('shortBreakMinutes', shortBreakMinutes);
         localStorage.setItem('longBreakMinutes', longBreakMinutes);
-
-        // Update the timer display with new settings
-        document.getElementById('timer').textContent = `${pomodoroMinutes}:00`;
 
         toggleSettings();
     }
