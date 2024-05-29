@@ -1,129 +1,32 @@
-:root {
-    --background-color: #1a1a2e;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="pomodoro">
+        <div class="buttons">
+            <button id="pomodoro-mode" class="active">Pomodoro</button>
+            <button id="short-break-mode">Short Break</button>
+            <button id="long-break-mode">Long Break</button>
+        </div>
+        <div id="timer">25:00</div>
+        <div class="pomodoro-controls">
+            <button id="start-pomodoro" class="start-button">Start</button>
+            <button id="reset-pomodoro" class="icon-button">🔄</button>
+            <button id="open-settings" class="icon-button">⚙️</button>
+        </div>
+        <div id="settings" style="display: none;">
+            <label>Pomodoro: <input type="number" id="pomodoro-minutes" value="25" min="1" max="60"> 分</label>
+            <label>Short Break: <input type="number" id="short-break-minutes" value="5" min="1" max="30"> 分</label>
+            <label>Long Break: <input type="number" id="long-break-minutes" value="15" min="1" max="60"> 分</label>
+            <button id="set-pomodoro">設定</button>
+        </div>
+    </div>
 
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background: var(--background-color);
-    color: white;
-}
-
-#pomodoro {
-    text-align: center;
-    transform: scale(0.8);
-    background: white;
-    border: 2px solid black;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#pomodoro .buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-#pomodoro .buttons button {
-    margin: 0 5px;
-    padding: 5px 15px;
-    border: 2px solid black;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.3);
-    color: black;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-#pomodoro .buttons button.active {
-    background: black;
-    color: white;
-}
-
-#timer {
-    font-size: 4em;
-    margin: 20px 0;
-    color: black;
-}
-
-.pomodoro-controls {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.pomodoro-controls .icon-button {
-    margin: 0 10px;
-    padding: 0;
-    width: 50px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 50%;
-    background: white;
-    color: black;
-    cursor: pointer;
-    font-size: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.pomodoro-controls .start-button {
-    margin: 0 10px;
-    padding: 5px 30px;
-    border: 2px solid black;
-    border-radius: 25px;
-    background: white;
-    color: black;
-    cursor: pointer;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-#open-settings {
-    font-size: 1.5em;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#settings {
-    margin-top: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    background: white;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#settings label {
-    display: block;
-    margin: 10px 0;
-}
-
-#settings input,
-#settings select {
-    width: 100px;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-#settings button {
-    margin-top: 10px;
-    padding: 5px 15px;
-    border: none;
-    border-radius: 25px;
-    background: black;
-    color: white;
-    cursor: pointer;
-    font-size: 1em;
-}
+    <script src="script.js"></script>
+</body>
+</html>
