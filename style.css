@@ -40,22 +40,13 @@ body {
 #timer {
     font-size: 4em;
     margin: 20px 0;
-    display: flex;
-    justify-content: center;
-}
-
-#timer .digit, #timer .colon {
-    padding: 0 10px;
-    margin: 0 2px;
-    border: 1px solid black;
-    border-radius: 5px;
-    display: inline-block;
-    color: white;
-}
-
-#timer .digit {
-    display: inline-block;
-    border: 2px solid black; /* 各数字に黒枠を追加 */
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 .pomodoro-controls {
