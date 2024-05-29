@@ -6,13 +6,17 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background: #1a1a2e;
-    color: white;
+    background: var(--background-color, #1a1a2e);
+    color: black;
 }
 
 #pomodoro {
     text-align: center;
     transform: scale(0.8);
+    background: white;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 #pomodoro .buttons {
@@ -26,19 +30,19 @@ body {
     padding: 5px 15px;
     border: none;
     border-radius: 25px;
-    background: rgba(255, 255, 255, 0.3);
-    color: white;
+    background: rgba(0, 0, 0, 0.1);
+    color: black;
     cursor: pointer;
     font-size: 1em;
 }
 
 #pomodoro .buttons button.active {
-    background: white;
-    color: #1a1a2e;
+    background: black;
+    color: white;
 }
 
 #timer {
-    font-size: 6em;
+    font-size: 4em;
     margin: 20px 0;
 }
 
@@ -49,14 +53,14 @@ body {
 }
 
 .pomodoro-controls .icon-button {
-    margin: 0 5px;
+    margin: 0 10px;
     padding: 0;
     width: 50px;
     height: 50px;
     border: none;
     border-radius: 50%;
-    background: white;
-    color: #1a1a2e;
+    background: black;
+    color: white;
     cursor: pointer;
     font-size: 1em;
     display: flex;
@@ -65,25 +69,21 @@ body {
 }
 
 .pomodoro-controls .start-button {
-    margin: 0 5px;
+    margin: 0 10px;
     padding: 5px 30px;
     border: none;
     border-radius: 25px;
-    background: white;
-    color: #1a1a2e;
+    background: black;
+    color: white;
     cursor: pointer;
-    font-size: 1.5em;  /* フォントサイズを大きく */
-    font-weight: bold; /* フォントを太く */
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 #open-settings {
     font-size: 1.5em;
     background: none;
     border: none;
-    cursor: pointer;
-    border-radius: 25px;
-    background: white;
-    color: #1a1a2e;
     cursor: pointer;
 }
 
@@ -93,8 +93,10 @@ body {
     border: none;
     border-radius: 10px;
     background: white;
-    color: #1a1a2e;
-    
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #settings label {
@@ -102,10 +104,11 @@ body {
     margin: 10px 0;
 }
 
-#settings input {
-    width: 50px;
+#settings input,
+#settings select {
+    width: 100px;
     padding: 5px;
-    border: 1px solid #1a1a2e;
+    border: 1px solid black;
     border-radius: 5px;
 }
 
@@ -114,7 +117,7 @@ body {
     padding: 5px 15px;
     border: none;
     border-radius: 25px;
-    background: #1a1a2e;
+    background: black;
     color: white;
     cursor: pointer;
     font-size: 1em;
