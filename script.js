@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('timer').textContent = `${pomodoroMinutes}:00`;
 
         // Update the background color
-        document.body.style.backgroundColor = backgroundColor;
+        document.documentElement.style.setProperty('--background-color', backgroundColor);
 
         toggleSettings();
     }
@@ -67,6 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('timer').textContent = `${pomodoroMinutes}:00`;
 
         // Set the background color
-        document.body.style.backgroundColor = backgroundColor;
+        document.documentElement.style.setProperty('--background-color', backgroundColor);
     }
 });
