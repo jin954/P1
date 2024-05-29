@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const shortBreakMinutesInput = document.getElementById('short-break-minutes');
     const longBreakMinutesInput = document.getElementById('long-break-minutes');
 
+    let interval;
+    let timerRunning = false;
+    let remainingTime = 0;
+
     // Load settings from localStorage
     loadSettings();
 
@@ -22,13 +26,40 @@ document.addEventListener('DOMContentLoaded', function () {
     longBreakModeButton.addEventListener('click', () => setMode('long-break'));
 
     function startPomodoro() {
-        // Pomodoro start logic
-        console.log("Pomodoro started");
+        if (!timerRunning) {
+            timerRunning = true;
+            const currentMode = document.querySelector('.buttons button.active').id;
+            let minutes;
+
+            if (currentMode === 'pomodoro-mode') {
+                minutes = parseInt(pomodoroMinutesInput.value);
+            } else if (currentMode === 'short-break-mode') {
+                minutes = parseInt(shortBreakMinutesInput.value);
+            } else if (currentMode === 'long-break-mode') {
+                minutes = parseInt(longBreakMinutesInput.value);
+            }
+
+            remainingTime = minutes * 60;
+            interval = setInterval(updateTimer, 1000);
+        }
     }
 
     function resetPomodoro() {
-        // Pomodoro reset logic
-        console.log("Pomodoro reset");
+        clearInterval(interval);
+        timerRunning = false;
+        remainingTime = 0;
+        const currentMode = document.querySelector('.buttons button.active').id;
+        let minutes;
+
+        if (currentMode === 'pomodoro-mode') {
+            minutes = parseInt(pomodoroMinutesInput.value);
+        } else if (currentMode === 'short-break-mode') {
+            minutes = parseInt(shortBreakMinutesInput.value);
+        } else if (currentMode === 'long-break-mode') {
+            minutes = parseInt(longBreakMinutesInput.value);
+        }
+
+        document.getElementById('timer').textContent = `${minutes}:00`;
     }
 
     function toggleSettings() {
@@ -79,6 +110,19 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (mode === 'long-break') {
             longBreakModeButton.classList.add('active');
             document.getElementById('timer').textContent = `${longBreakMinutesInput.value}:00`;
+        }
+    }
+
+    function updateTimer() {
+        remainingTime--;
+        const minutes = Math.floor(remainingTime / 60);
+        const seconds = remainingTime % 60;
+        document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+        if (remainingTime <= 0) {
+            clearInterval(interval);
+            timerRunning = false;
+            // ここにタイマー終了時の処理を追加することができます
         }
     }
 });
