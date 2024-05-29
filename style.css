@@ -45,11 +45,17 @@ body {
 }
 
 #timer .digit, #timer .colon {
-    display: inline-block;
-    padding: 10px;
+    padding: 0 10px;
     margin: 0 2px;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    color: white;
+}
+
+#timer .digit {
+    display: inline-block;
+    border: 2px solid black; /* 各数字に黒枠を追加 */
 }
 
 .pomodoro-controls {
