@@ -24,7 +24,7 @@ body {
 #pomodoro .buttons button {
     margin: 0 5px;
     padding: 5px 15px;
-    border: 2px solid black; /* 黒色の枠 */
+    border: 1px solid black; /* 黒色の枠を狭く */
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.3);
     color: white;
@@ -40,6 +40,9 @@ body {
 #timer {
     font-size: 4em;
     margin: 20px 0;
+    border: 1px solid black; /* 黒色の枠を追加 */
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .pomodoro-controls {
@@ -53,7 +56,7 @@ body {
     padding: 0;
     width: 50px;
     height: 50px;
-    border: 2px solid black; /* 黒色の枠 */
+    border: 1px solid black; /* 黒色の枠を狭く */
     border-radius: 50%;
     background: white;
     color: #1a1a2e;
@@ -67,7 +70,7 @@ body {
 .pomodoro-controls .start-button {
     margin: 0 10px;
     padding: 5px 30px;
-    border: 2px solid black; /* 黒色の枠 */
+    border: 1px solid black; /* 黒色の枠を狭く */
     border-radius: 25px;
     background: white;
     color: #1a1a2e;
@@ -110,7 +113,7 @@ body {
 #settings button {
     margin-top: 10px;
     padding: 5px 15px;
-    border: 2px solid black; /* 黒色の枠 */
+    border: 1px solid black; /* 黒色の枠を狭く */
     border-radius: 25px;
     background: #1a1a2e;
     color: white;
